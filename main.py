@@ -1,5 +1,5 @@
 from datetime import datetime
-import foods
+from exceptions import Error
 
 today = datetime.today()
 now = datetime.now()
@@ -22,16 +22,28 @@ print("{}".format(greeting))
 
 proteins = "\nBeef\nLamb\nChicken\nSeafood"
 
-diet = input("Do you eat meat? (yes/no): ")
-yes=True
-no = False
+while True:
+    try:
+        diet = str(input("Do you eat meat? (yes/no): "))
+        if diet != 'yes' 'no':
+            raise Exceptions.Error.YesOrNo
+        elif diet == int:
+            raise Error.NotNumber
+        continue
+    except Error.YesOrNo:
+        print("Please enter yes or no")
+        print()
+    except Error.NotNumber:
+        print("Please do not enter numbers")
 
-if diet is True:
-    print("OK let's find you a nice meal")
-else: diet is False
-    # print("thats fine")
+#     else:print("Please enter yes or no")
+#         break
 
+# herbivore = 'vegan or vegetarian'
 
-
+# if diet == "yes":
+#     print(f"OK let's find you a delicious {herbivore} meal")
+# else:
+#     print("OK let's find you a delicious meal")
 
 # protein_choice = input(f"Choose from the following protein options: {proteins}")
