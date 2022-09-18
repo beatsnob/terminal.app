@@ -15,6 +15,6 @@ if hour < 12:
 elif hour < 18:
     greeting = "Good afternoon! It's lunch time! What do you feel like eating?"
 else:
-    greeting = "Good evening! It's time for dinner! What do you want to eat?" 
+    greeting = "Good evening! It's time for dinner! What do you want to eat?"
 
 print("{}".format(greeting))
