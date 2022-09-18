@@ -1,5 +1,6 @@
 from datetime import datetime
-from exceptions import Error
+from tkinter.tix import INTEGER
+# from exceptions import Error
 
 today = datetime.today()
 now = datetime.now()
@@ -22,27 +23,48 @@ print("{}".format(greeting))
 
 proteins = "\nBeef\nLamb\nChicken\nSeafood"
 
+class Error(Exception):
+    pass
+
+class YesOrNo(Error):
+    pass
+
+class NotNumber(Error):
+    pass
+
+herbivore = 'vegan or vegetarian'
+
 while True:
     try:
-        diet = str(input("Do you eat meat? (yes/no): "))
-        if diet != 'yes' 'no':
-            raise Exceptions.Error.YesOrNo
-        elif diet == int:
-            raise Error.NotNumber
-        continue
-    except Error.YesOrNo:
-        print("Please enter yes or no")
-        print()
-    except Error.NotNumber:
+        diet = input("Do you eat meat? (yes/no): ")
+        if diet != 'yes''no':
+            raise YesOrNo
+        elif diet == INTEGER:
+            raise NotNumber
+        else:
+            print("did it")
+        break
+    except NotNumber:
         print("Please do not enter numbers")
+    except YesOrNo:
+        print("Please enter yes or no")
+    # else:
+    #     print(f"OK let's find you a delicious {herbivore} meal")
+
+        # elif diet == int:
+        #     raise NotNumber
+        # continue
+   
+    # 
+        
+   
 
 #     else:print("Please enter yes or no")
 #         break
 
-# herbivore = 'vegan or vegetarian'
 
-# if diet == "yes":
-#     print(f"OK let's find you a delicious {herbivore} meal")
+
+#
 # else:
 #     print("OK let's find you a delicious meal")
 
