@@ -24,7 +24,7 @@ print("{}".format(greeting))
 # class YesOrNoError(Error):
 #     pass
 
-herbivore = 'vegan or vegetarian'
+herbivore = "vegan or vegetarian"
 proteins = "\n\n - Beef\n - Lamb\n - Chicken\n - Seafood\n\n"
 # while True:
 #     try:
@@ -35,3 +35,14 @@ elif diet == 'yes':
     input(f"OK let's find you a delicious meal.\nChoose from the following protein options: {proteins}")
 else:
     print("Please enter yes or no")
+
+second_choice = "SECOND RECIPE GOES HERE"
+
+if diet == 'no':
+    another_recipe = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ")
+elif diet == 'yes':
+    print("Here is an easy yet delicious meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ")
+
+if another_recipe == 'yes':
+    print(f"Ok, here is another delicious meal:\n\n{second_choice}\n\n")
+
