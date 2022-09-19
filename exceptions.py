@@ -1,8 +1,8 @@
 class Error(Exception):
     pass
 
-class YesOrNo(Error):
+class YesOrNoError(Error):
     pass
 
-class NotNumber(Error):
+class NotNumberError(Error):
     pass
