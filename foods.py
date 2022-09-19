@@ -14,4 +14,3 @@ class Meal:
         self.time = time
         self.main = main
 
-

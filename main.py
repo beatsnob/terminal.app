@@ -1,4 +1,5 @@
 from datetime import datetime
+import foods
 
 today = datetime.today()
 now = datetime.now()
@@ -36,13 +37,27 @@ elif diet == 'yes':
 else:
     print("Please enter yes or no")
 
-second_choice = "SECOND RECIPE GOES HERE"
+# second_choice = "SECOND RECIPE GOES HERE" - replaced with side dish instead
+# Instances of meal class from foods
+# Vegetarian meals
+breakfast_main_veg = foods.Meal('Vegetarian', 'Breakfast', 'Main meal')
+breakfast_side_veg = foods.Meal('Vegetarian', 'Breakfast', 'Side dish')
+lunch_main_veg = foods.Meal('Vegetarian', 'Lunch', 'Main meal')
+lunch_side_veg = foods.Meal('Vegetarian', 'Lunch', 'Side dish')
+dinner_main_veg = foods.Meal('Vegetarian', 'Dinner', 'Main meal')
+dinner_side_veg = foods.Meal('Vegetarian', 'Dinner', 'Side dish')
+# Meat based meals
+breakfast_main_meat = foods.Meal('Meat', 'Breakfast', 'Main meal')
+breakfast_side_meat = foods.Meal('Meat', 'Breakfast', 'Side dish')
+lunch_main_beef = foods.Meal('Beef', 'Lunch', 'Main meal')
+lunch_side_beef = foods.Meal('Beef', 'Lunch', 'Side dish')
+
 
 if diet == 'no':
-    another_recipe = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ")
+    another_recipe = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like a side dish? (yes/no): ")
 elif diet == 'yes':
     print("Here is an easy yet delicious meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ")
 
 if another_recipe == 'yes':
-    print(f"Ok, here is another delicious meal:\n\n{second_choice}\n\n")
+    print(f"Ok, here is a side dish to your meal:\n\n{lunch_side_beef}\n\n") #unsure about how to incorporate the attributes of the instances
 
