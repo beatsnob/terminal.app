@@ -1,5 +1,6 @@
 from datetime import datetime
 import foods
+import json
 
 today = datetime.today()
 now = datetime.now()
@@ -69,10 +70,12 @@ dinner_side_seafood = foods.Meal('Seafood', 'Dinner', 'Side dish')
 
 
 if diet == 'no':
-    another_recipe = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like a side dish? (yes/no): ")
+    side_dish = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like a side dish? (yes/no): ")
 elif diet == 'yes':
     print("Here is an easy yet delicious meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ")
 
-if another_recipe == 'yes':
+if side_dish == 'yes':
     print(f"Ok, here is a side dish to your meal:\n\n{lunch_side_beef}\n\n") #unsure about how to incorporate the attributes of the instances
+elif side_dish == 'no':
+    print("Bon Apetit! Buen Provecho! Enjoy your meal!")
 

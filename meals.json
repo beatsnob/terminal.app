@@ -1,0 +1,35 @@
+{
+    "meals": [
+
+        {
+            "mealType": "Vegetarian",
+            "mealTime": "Breakfast",
+            "mealSize": "Main"
+        },
+        {
+            "mealType": "Meat",
+            "mealTime": "Breakfast",
+            "mealSize": "Side"
+        },
+        {
+            "mealType": "Vegetarian",
+            "mealTime": "Lunch",
+            "mealSize": "Main"
+        },
+        {
+            "mealType": "Meat",
+            "mealTime": "Lunch",
+            "mealSize": "Side"
+        }
+        {
+            "mealType": "Vegetarian",
+            "mealTime": "Dinner",
+            "mealSize": "Main"
+        }
+        {
+            "mealType": "Meat",
+            "mealTime": "Dinner",
+            "mealSize": "Side"
+        }
+    ]
+}
