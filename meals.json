@@ -4,7 +4,8 @@
         {
             "mealType": "Vegetarian",
             "mealTime": "Breakfast",
-            "mealSize": "Main"
+            "mealSize": "Main",
+            "mealName": "Marmalade Toast"
         },
         {
             "mealType": "Meat",
@@ -15,17 +16,18 @@
             "mealType": "Vegetarian",
             "mealTime": "Lunch",
             "mealSize": "Main"
+            "mealName"
         },
         {
             "mealType": "Meat",
             "mealTime": "Lunch",
             "mealSize": "Side"
-        }
+        },
         {
             "mealType": "Vegetarian",
             "mealTime": "Dinner",
             "mealSize": "Main"
-        }
+        },
         {
             "mealType": "Meat",
             "mealTime": "Dinner",

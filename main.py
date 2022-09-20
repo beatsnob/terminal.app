@@ -68,7 +68,7 @@ dinner_main_seafood = foods.Meal('Seafood', 'Dinner', 'Main meal')
 dinner_side_seafood = foods.Meal('Seafood', 'Dinner', 'Side dish')
 
 
-
+side_dish  = ''
 if diet == 'no':
     side_dish = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like a side dish? (yes/no): ")
 elif diet == 'yes':
@@ -79,3 +79,10 @@ if side_dish == 'yes':
 elif side_dish == 'no':
     print("Bon Apetit! Buen Provecho! Enjoy your meal!")
 
+# Opening JSON file
+with open('meals.json', 'r') as openfile:
+ 
+    # Reading from json file
+    json_object = json.load(openfile)["meals"]
+ 
+print(json_object[0]["mealName"])
