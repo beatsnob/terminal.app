@@ -51,6 +51,21 @@ breakfast_main_meat = foods.Meal('Meat', 'Breakfast', 'Main meal')
 breakfast_side_meat = foods.Meal('Meat', 'Breakfast', 'Side dish')
 lunch_main_beef = foods.Meal('Beef', 'Lunch', 'Main meal')
 lunch_side_beef = foods.Meal('Beef', 'Lunch', 'Side dish')
+dinner_main_beef = foods.Meal('Beef', 'Dinner', 'Main meal')
+dinner_side_beef = foods.Meal('Beef', 'Dinner', 'Side dish')
+lunch_main_lamb = foods.Meal('Lamb', 'Lunch', 'Main meal')
+lunch_side_lamb = foods.Meal('Lamb', 'Lunch', 'Side dish')
+dinner_main_lamb = foods.Meal('Lamb', 'Dinner', 'Main meal')
+dinner_side_lamb = foods.Meal('Lamb', 'Dinner', 'Side dish')
+lunch_main_chicken = foods.Meal('Chicken', 'Lunch', 'Main meal')
+lunch_side_chicken = foods.Meal('Chicken', 'Lunch', 'Side dish')
+dinner_main_chicken = foods.Meal('Chicken', 'Dinner', 'Main meal')
+dinner_side_chicken = foods.Meal('Chicken', 'Dinner', 'Side dish')
+lunch_main_seafood = foods.Meal('Seafood', 'Lunch', 'Main meal')
+lunch_side_seafood = foods.Meal('Seafood', 'Lunch', 'Side dish')
+dinner_main_seafood = foods.Meal('Seafood', 'Dinner', 'Main meal')
+dinner_side_seafood = foods.Meal('Seafood', 'Dinner', 'Side dish')
+
 
 
 if diet == 'no':
