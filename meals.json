@@ -2,117 +2,152 @@
     "meals": [
 
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Breakfast",
-            "mealSize": "Main",
-            "mealName": "Marmalade Toast"
+            "mealType": "vegetarian",
+            "mealTime": "breakfast",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN VEG BREAKFAST"
         },
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Breakfast",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "vegetarian",
+            "mealTime": "breakfast",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE VEG BREAKFAST"
         },
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Lunch",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "vegetarian",
+            "mealTime": "lunch",
+            "mealSize": "main",
+            "mealName":"EXAMPLE MAIN VEG LUNCH"
         },
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Lunch",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "vegetarian",
+            "mealTime": "lunch",
+            "mealSize": "side",
+            "mealName":"EXAMPLE SIDE VEG LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Beef",
-            "mealTime": "Lunch",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "beef",
+            "mealTime": "lunch",
+            "mealSize": "main",
+            "mealName":"EXAMPLE MAIN BEEF LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Beef",
-            "mealTime": "Lunch",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "beef",
+            "mealTime": "lunch",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE BEEF LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Lamb",
-            "mealTime": "Lunch",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "lamb",
+            "mealTime": "lunch",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN LAMB LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Lamb",
-            "mealTime": "Lunch",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "lamb",
+            "mealTime": "lunch",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE LAMB LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Chicken",
-            "mealTime": "Lunch",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "chicken",
+            "mealTime": "lunch",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN CHICKEN LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Chicken",
-            "mealTime": "Lunch",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "chicken",
+            "mealTime": "lunch",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE CHICKEN LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Seafood",
-            "mealTime": "Lunch",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "seafood",
+            "mealTime": "lunch",
+            "mealSize": "main",
+            "mealName":"EXAMPLE MAIN SEAFOOD LUNCH"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Seafood",
-            "mealTime": "Lunch",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "seafood",
+            "mealTime": "lunch",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE SEAFOOD LUNCH"
         },
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Dinner",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "vegetarian",
+            "mealTime": "dinner",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN VEG DINNER"
         },
         {
-            "mealType": "Vegetarian",
-            "mealTime": "Dinner",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "vegetarian",
+            "mealTime": "dinner",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE VEG DINNER"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Beef",
-            "mealTime": "Dinner",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "beef",
+            "mealTime": "dinner",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN BEEF DINNER"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Beef",
-            "mealTime": "Dinner",
-            "mealSize": "Side",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "beef",
+            "mealTime": "dinner",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE BEEF DINNER"
         },
         {
-            "mealType": "Meat",
-            "mealProtein": "Lamb",
-            "mealTime": "Dinner",
-            "mealSize": "Main",
-            "mealName":
+            "mealType": "meat",
+            "mealProtein": "lamb",
+            "mealTime": "dinner",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN LAMB DINNER"
         },
+        {
+            "mealType": "meat",
+            "mealProtein": "lamb",
+            "mealTime": "dinner",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE LAMB DINNER"
+        },
+        {
+            "mealType": "meat",
+            "mealProtein": "chicken",
+            "mealTime": "dinner",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN CHICKEN DINNER"
+        },
+        {
+            "mealType": "meat",
+            "mealProtein": "chicken",
+            "mealTime": "dinner",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE CHICKEN DINNER"
+        },
+        {
+            "mealType": "meat",
+            "mealProtein": "seafood",
+            "mealTime": "dinner",
+            "mealSize": "main",
+            "mealName": "EXAMPLE MAIN SEAFOOD DINNER"
+        },
+        {
+            "mealType": "meat",
+            "mealProtein": "seafood",
+            "mealTime": "dinner",
+            "mealSize": "side",
+            "mealName": "EXAMPLE SIDE SEAFOOD DINNER"
+        }
     ]
 }
