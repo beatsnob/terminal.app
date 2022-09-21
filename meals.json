@@ -8,30 +8,111 @@
             "mealName": "Marmalade Toast"
         },
         {
-            "mealType": "Meat",
+            "mealType": "Vegetarian",
             "mealTime": "Breakfast",
-            "mealSize": "Side"
+            "mealSize": "Side",
+            "mealName":
         },
         {
             "mealType": "Vegetarian",
             "mealTime": "Lunch",
-            "mealSize": "Main"
-            "mealName"
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Vegetarian",
+            "mealTime": "Lunch",
+            "mealSize": "Side",
+            "mealName":
         },
         {
             "mealType": "Meat",
+            "mealProtein": "Beef",
             "mealTime": "Lunch",
-            "mealSize": "Side"
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Beef",
+            "mealTime": "Lunch",
+            "mealSize": "Side",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Lamb",
+            "mealTime": "Lunch",
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Lamb",
+            "mealTime": "Lunch",
+            "mealSize": "Side",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Chicken",
+            "mealTime": "Lunch",
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Chicken",
+            "mealTime": "Lunch",
+            "mealSize": "Side",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Seafood",
+            "mealTime": "Lunch",
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Seafood",
+            "mealTime": "Lunch",
+            "mealSize": "Side",
+            "mealName":
         },
         {
             "mealType": "Vegetarian",
             "mealTime": "Dinner",
-            "mealSize": "Main"
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Vegetarian",
+            "mealTime": "Dinner",
+            "mealSize": "Side",
+            "mealName":
         },
         {
             "mealType": "Meat",
+            "mealProtein": "Beef",
             "mealTime": "Dinner",
-            "mealSize": "Side"
-        }
+            "mealSize": "Main",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Beef",
+            "mealTime": "Dinner",
+            "mealSize": "Side",
+            "mealName":
+        },
+        {
+            "mealType": "Meat",
+            "mealProtein": "Lamb",
+            "mealTime": "Dinner",
+            "mealSize": "Main",
+            "mealName":
+        },
     ]
 }

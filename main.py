@@ -20,16 +20,12 @@ else:
 
 print("{}".format(greeting))
 
-# class Error(Exception):
-#     pass
-
-# class YesOrNoError(Error):
-#     pass
-
 herbivore = "vegan or vegetarian"
 proteins = "\n\n - Beef\n - Lamb\n - Chicken\n - Seafood\n\n"
+
 # while True:
 #     try:
+
 diet = input("Do you eat meat? (yes/no): ")
 if diet == 'no':
     print(f"OK let's find you a delicious {herbivore} meal.")
