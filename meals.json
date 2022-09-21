@@ -11,7 +11,7 @@
             "mealType": "vegetarian",
             "mealTime": "breakfast",
             "mealSize": "side",
-            "mealName": "Potato Rösti!\n"
+            "mealName": "Swiss potato Rösti!\n"
         },
         {
             "mealType": "vegetarian",
@@ -30,7 +30,7 @@
             "mealProtein": "beef",
             "mealTime": "lunch",
             "mealSize": "main",
-            "mealName":"Swedish meatballs!\n"
+            "mealName":"Swedish meatballs with brunsås!\n"
         },
         {
             "mealType": "meat",
@@ -44,7 +44,7 @@
             "mealProtein": "lamb",
             "mealTime": "lunch",
             "mealSize": "main",
-            "mealName": "Lamb kofta amd tabbouli wrap!\n"
+            "mealName": "Lamb kofta and tabbouli wrap!\n"
         },
         {
             "mealType": "meat",
@@ -98,7 +98,7 @@
             "mealProtein": "beef",
             "mealTime": "dinner",
             "mealSize": "main",
-            "mealName": "Roast beef with potatoes and honey carrots!\n"
+            "mealName": "Roast beef with potatoes and honeyed carrots!\n"
         },
         {
             "mealType": "meat",
@@ -126,7 +126,7 @@
             "mealProtein": "chicken",
             "mealTime": "dinner",
             "mealSize": "main",
-            "mealName": "Golden buttery roast chicken\n"
+            "mealName": "Golden buttery roast chicken!\n"
         },
         {
             "mealType": "meat",
