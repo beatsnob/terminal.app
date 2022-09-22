@@ -4,22 +4,26 @@ from datetime import datetime
 import json
 
 # Definitions
-# # Date and time display format
+
+# # Date and time definitions and display format
 today = datetime.today()
 now = datetime.now()
 hour = now.hour
 date = today.strftime("%A %B %d, %Y")
 time = now.strftime("%H:%M %p")
+
+#Side dish questions and output
 agree = '\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m'
 disagree = '\033[35m'"\nNo problems, bon Apetit! Buen Provecho and Enjoy your meal!\n"'\033[39m'
 wish = '\033[35m'"Bon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m'
+
+#Greetings
 morning_greeting = (f"Good morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n")
 afternoon_greeting = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
 evening_greeting = (f"Good evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n")
 side_dish = ''
 
 #Functions
-
 def side_disagree(disagree):
     print(disagree)
 
@@ -29,16 +33,18 @@ def side_agree(agree):
 def bon_apetit(wish):
     print(wish)
 
-def date_time(morning_greeting, afternoon_greeting, evening_greeting):
-    print("{}".format(morning_greeting))
-    print("{}".format(afternoon_greeting))
-    print("{}".format(evening_greeting))
+def morning_greeting(morning):
+    print("{}".format(morning))
+
+def afternoon_greeting(afternoon):
+    print("{}".format(afternoon))
+
+def evening_greeting(evening):
+    print("{}".format(evening))
 
 #Opening and reading json file
 with open('meals.json', 'r') as openfile:
     json_object = json.load(openfile)["meals"]
-
-
 
 # Conditional greeting based on the current time
 if hour < 12:
@@ -46,7 +52,7 @@ if hour < 12:
 elif hour < 18:
     greeting = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
 else:
-    date_time(morning_greeting, afternoon_greeting, evening_greeting)
+    evening_greeting(evening)
     # greeting = (f"Good evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n")
 
 # print("{}".format(greeting))
