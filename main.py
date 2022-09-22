@@ -25,7 +25,7 @@ herbivore = "vegetarian"
 proteins = "\n\n - Beef\n - Lamb\n - Chicken\n - Seafood\n\n"
 protein_option = ''
 side_dish = ''
-
+diet = ''
 #Opening json file
 with open('meals.json', 'r') as openfile:
 # Reading json file
@@ -33,6 +33,7 @@ with open('meals.json', 'r') as openfile:
 
 # Vegetarian meal and side dish conditional question
 
+# while diet not in ('yes', 'no'):
 diet = input('\033[31m'"Do you eat meat? (yes/no): "'\033[39m').lower()
 #Vegetarian breakfast
 if diet == 'no' and hour < 12:
@@ -42,6 +43,8 @@ if diet == 'no' and hour < 12:
 if side_dish == 'yes' and diet == "no" and hour < 12:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[1]["mealName"])
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
+    
 #Vegetarian lunch
 elif diet == 'no' and hour < 18:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} lunch:\n"'\033[39m')
@@ -50,6 +53,7 @@ elif diet == 'no' and hour < 18:
 if side_dish == 'yes' and diet == "no" and hour < 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[3]["mealName"])
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 #Vegetarian dinner
 elif diet == 'no' and hour > 18:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} dinner:\n"'\033[39m')
@@ -58,10 +62,10 @@ elif diet == 'no' and hour > 18:
 if side_dish == 'yes' and diet == "no" and hour > 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[13]["mealName"])
-elif side_dish == 'no':
     print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 # else:
-#     print("Please enter yes or no")
+#         print("Please enter yes or no")
+
 
 # Protein meal and side dish conditonal question
 if diet == 'yes':
@@ -75,8 +79,8 @@ if protein_option == "beef" and hour < 18:
 if side_dish == "yes" and protein_option == 'beef' and hour < 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[5]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
+
 #beef dinner
 elif protein_option == "beef" and hour > 18:
     print('\033[33m'"\nHere is an exquisite meal suggestion for your dinner:\n"'\033[39m')
@@ -85,8 +89,7 @@ elif protein_option == "beef" and hour > 18:
 if side_dish == 'yes' and protein_option == "beef" and hour > 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[15]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 
 #lamb lunch
 elif protein_option == "lamb" and hour < 18:
@@ -94,10 +97,10 @@ elif protein_option == "lamb" and hour < 18:
     print(json_object[6]["mealName"])
     side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
 if side_dish == 'yes' and protein_option == "lamb" and hour < 18:
-    print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
+    print('\033[34m'"\nHere is a side dish to go with your meal!: \nBon Apetit! Buen Provecho! Enjoy your meal!"'\033[39m')
     print(json_object[7]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
+
 #lamb dinner
 elif protein_option == "lamb" and hour > 18:
     print('\033[33m'"\nHere is an exquisite meal suggestion for your dinner:\n"'\033[39m')
@@ -106,8 +109,7 @@ elif protein_option == "lamb" and hour > 18:
 if side_dish == 'yes' and protein_option == "lamb" and hour > 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[17]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 
 #chicken lunch
 elif protein_option == "chicken" and hour < 18:
@@ -117,8 +119,8 @@ elif protein_option == "chicken" and hour < 18:
 if side_dish == 'yes' and protein_option == "chicken" and hour < 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[9]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
+
 #chicken dinner
 elif protein_option == "chicken" and hour > 18:
     print('\033[33m'"\nHere is an exquisite meal suggestion for your dinner:\n"'\033[39m')
@@ -127,8 +129,7 @@ elif protein_option == "chicken" and hour > 18:
 if side_dish == 'yes' and protein_option == "chicken" and hour > 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[19]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 
 #seafood lunch
 elif protein_option == "seafood" and hour < 18:
@@ -138,8 +139,8 @@ elif protein_option == "seafood" and hour < 18:
 if side_dish == 'yes' and protein_option == "seafood" and hour < 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[11]["mealName"])
-# elif side_dish == 'no':
-#     print("\nBon Apetit! Buen Provecho! Enjoy your meal!\n")
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
+
 #seafood dinner
 elif protein_option == "seafood" and hour > 18:
     print('\033[33m'"\nHere is an exquisite meal suggestion for your dinner:\n"'\033[39m')
@@ -148,42 +149,6 @@ elif protein_option == "seafood" and hour > 18:
 if side_dish == 'yes' and protein_option == "seafood" and hour > 18:
     print('\033[34m'"\nHere is a side dish to go with your meal!:\n"'\033[39m')
     print(json_object[21]["mealName"])
+    print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 elif side_dish == 'no':
     print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
-    
-
-# else:
-#     print("Please enter yes or no")
-
-# #Side dish conditionals
-# side_dish = input("Would you like a side dish to accompany your meal? (yes/no): ").lower()
-# if side_dish == "yes" and protein_option == 'beef' and hour < 18:
-#     print("Here is a side dish to go with your meal!")
-#     print(json_object[5]["mealName"])
-# elif side_dish == 'yes' and protein_option == "beef" and hour > 18:
-#     print("Here is an exquisite meal suggestion for your dinner:")
-#     print(json_object[15]["mealName"])
-# else:
-#     print("Please enter yes or no")
-
-# side_dish = input("Would you like a side dish to accompany your meal? (yes/no): ").lower()
-# if side_dish == "yes":
-#     print("Here is a side dish to go with your meal!")
-#     print(json_object[7]["mealName"])
-
-
-
-
-
-# side_dish  = ''
-
-# if diet == 'no':
-#     side_dish = input("Here is an easy yet delicious vegetarian meal:\n\nRECIPE GOES HERE\n\nWould you like a side dish? (yes/no): ").lower()
-# elif diet == 'yes':
-#     input("Here is an easy yet delicious meal:\n\nRECIPE GOES HERE\n\nWould you like another? (yes/no): ").lower()
-
-# if side_dish == 'yes':
-#     print(f"Ok, here is a side dish to your meal:\n\n{}\n\n")
-
-
-
