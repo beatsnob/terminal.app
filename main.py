@@ -37,7 +37,7 @@ def random_meal():
 
 
 # random = random.choice(list(json_object))
-random_choice = input("Would you like me to choose a random meal for you? (yes/no): ").lower()
+random_choice = input('\033[31m'"Would you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
 
 if random_choice == 'yes':
     print('\033[36m'"\nYour randomly selected meal is: "'\033[39m'+ random_meal()["mealName"])
