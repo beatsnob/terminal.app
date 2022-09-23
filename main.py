@@ -33,7 +33,6 @@ with open('meals.json', 'r') as openfile:
     json_object = json.load(openfile)["meals"]
 
 def random_meal():
-    # print (json_object)
     return random.choice(json_object)
 
 
@@ -41,7 +40,7 @@ def random_meal():
 random_choice = input("Would you like me to choose a random meal for you? (yes/no): ").lower()
 
 if random_choice == 'yes':
-    print('Your randomly selected meal is: '+ random_meal()["mealName"])
+    print('\033[36m'"\nYour randomly selected meal is: "'\033[39m'+ random_meal()["mealName"])
 
 # Vegetarian meal and side dish conditional question    
 # while diet not in ('yes', 'no'):
