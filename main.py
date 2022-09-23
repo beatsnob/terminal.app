@@ -25,6 +25,7 @@ proteins = "\n\n - Beef\n - Lamb\n - Chicken\n - Seafood\n\n"
 protein_option = ''
 side_dish = ''
 diet = ''
+random_choice = ''
 
 #Greetings
 morning = ('\033[33m'f"\nGood morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n"'\033[39m')
@@ -72,19 +73,24 @@ else:
     evening_greeting(evening)
 
 # Random meal selection question and conditionals
-random_choice = input('\033[31m'"Would you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
+while True:
+    random_choice = input('\033[31m'"Would you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
+    if random_choice == 'yes' or random_choice == 'no':
+        break
 if random_choice == 'yes':
     print('\033[36m'"\nYour randomly selected meal is: "'\033[39m'+ random_meal()["mealName"])
 go_on = input('\033[31m'"\nWould you like to continue choosing a meal? (yes/no): "'\033[39m').lower()
+
+
 if go_on == 'yes':
 # Vegetarian meals
     diet = input('\033[31m'"\nDo you eat meat? (yes/no): "'\033[39m').lower()
-elif random_choice == 'no' and go_on == 'no':
+elif go_on == 'no':
     print('\033[33m'"\nThank you, see you next time!"'\033[39m')
 else:
     bon_apetit(wish)
 #Vegetarian breakfast
-if diet == 'no' and hour < 12:
+if random_choice == 'no' and diet == 'no' and hour < 12:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} breakfast:\n"'\033[39m')
     print(json_object[0]["mealName"])
     side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
