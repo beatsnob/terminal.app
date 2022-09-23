@@ -74,18 +74,22 @@ else:
 
 # Random meal selection question and conditionals
 while True:
-    random_choice = input('\033[31m'"Would you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
+    random_choice = input('\033[31m'"\nWould you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
     if random_choice == 'yes' or random_choice == 'no':
         break
 if random_choice == 'yes':
     print('\033[36m'"\nYour randomly selected meal is: "'\033[39m'+ random_meal()["mealName"])
-go_on = input('\033[31m'"\nWould you like to continue choosing a meal? (yes/no): "'\033[39m').lower()
-
-
+while True:
+    go_on = input('\033[31m'"\nWould you like to continue choosing a meal? (yes/no): "'\033[39m').lower()
+    if go_on == 'yes' or go_on == 'no':
+        break
 if go_on == 'yes':
 # Vegetarian meals
-    diet = input('\033[31m'"\nDo you eat meat? (yes/no): "'\033[39m').lower()
-elif go_on == 'no':
+    while True:
+        diet = input('\033[31m'"\nDo you eat meat? (yes/no): "'\033[39m').lower()
+        if diet == 'yes' or diet == 'no':
+            break
+elif go_on == 'no' and random_choice == 'no':
     print('\033[33m'"\nThank you, see you next time!"'\033[39m')
 else:
     bon_apetit(wish)
@@ -93,7 +97,10 @@ else:
 if random_choice == 'no' and diet == 'no' and hour < 12:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} breakfast:\n"'\033[39m')
     print(json_object[0]["mealName"])
-    side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+    while True:
+        side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+        if side_dish == 'yes' and side_dish == 'no':
+            break
 if side_dish == 'yes' and diet == "no" and hour < 12:
     side_agree(agree)
     print(json_object[1]["mealName"])
@@ -101,10 +108,13 @@ if side_dish == 'yes' and diet == "no" and hour < 12:
 elif side_dish == 'no':
     side_disagree(disagree)
 #Vegetarian lunch
-elif diet == 'no' and hour < 18:
+elif diet == 'no' and go_on == 'yes' and hour < 18:
     order_up_veg(veg)
     print(json_object[2]["mealName"])
-    side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+    while True:
+        side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+        if side_dish == 'yes' and side_dish == 'no':
+            break
 if side_dish == 'yes' and diet == "no" and hour < 18:
     side_agree(agree)
     print(json_object[3]["mealName"])
@@ -125,7 +135,10 @@ elif side_dish == 'no' and hour > 18:
 
 # Protein meals
 if diet == 'yes':
-    protein_option = input('\033[32m'f"\nOK let's find you a delicious meal.\nChoose from the following protein options: {proteins}"'\033[39m').lower()
+    while True:
+        protein_option = input('\033[32m'f"\nOK let's find you a delicious meal.\nChoose from the following protein options: {proteins}"'\033[39m').lower()
+        if protein_option == 'beef' or protein_option == 'lamb' or protein_option == 'chicken' or protein_option == 'seafood':
+            break
 # Beef lunch
 if protein_option == "beef" and hour < 18:
     order_up_meat(meat)
