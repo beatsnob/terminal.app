@@ -18,9 +18,9 @@ disagree = '\033[35m'"\nNo problems, bon Apetit! Buen Provecho and Enjoy your me
 wish = '\033[35m'"Bon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m'
 
 #Greetings
-morning_greeting = (f"Good morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n")
-afternoon_greeting = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
-evening_greeting = (f"Good evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n")
+morning = (f"Good morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n")
+afternoon = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
+evening = (f"Good evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n")
 side_dish = ''
 
 #Functions
@@ -48,9 +48,11 @@ with open('meals.json', 'r') as openfile:
 
 # Conditional greeting based on the current time
 if hour < 12:
-    greeting = (f"Good morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n")
+    morning_greeting(morning)
+    # greeting = (f"Good morning! Today is {date}. The time is {time}. \nIt's breakfast time! Let's find a delicious meal to eat!\n")
 elif hour < 18:
-    greeting = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
+    afternoon_greeting(afternoon)
+    # greeting = (f"Good afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n")
 else:
     evening_greeting(evening)
     # greeting = (f"Good evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n")
@@ -82,7 +84,7 @@ elif diet == 'no' and hour < 18:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} lunch:\n"'\033[39m')
     print(json_object[2]["mealName"])
     side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-if side_dish == 'yes' and diet == "no" and hour < 18:
+if side_dish == 'yes' and diet == "no" and hour > 18:
     side_agree(agree)
     print(json_object[3]["mealName"])
     print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
@@ -90,11 +92,11 @@ elif side_dish == 'no':
     side_disagree(disagree)
     print('\033[35m'"\nBon Apetit! Buen Provecho! Enjoy your meal!\n"'\033[39m')
 #Vegetarian dinner
-elif diet == 'no' and hour < 23:
+elif diet == 'no' and hour > 18:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} dinner:\n"'\033[39m')
     print(json_object[12]["mealName"])
     side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-if side_dish == 'yes' and diet == "no" and hour < 23:
+if side_dish == 'yes' and diet == "no" and hour > 18:
     side_agree(agree)
     print(json_object[13]["mealName"])
     bon_apetit(wish)

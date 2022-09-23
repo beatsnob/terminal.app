@@ -2,6 +2,7 @@ from colorama import init
 init()
 from datetime import datetime
 import json
+import random
 
 today = datetime.today()
 now = datetime.now()
@@ -31,10 +32,21 @@ with open('meals.json', 'r') as openfile:
 # Reading json file
     json_object = json.load(openfile)["meals"]
 
-# Vegetarian meal and side dish conditional question
+def random_meal():
+    # print (json_object)
+    return random.choice(json_object)
 
+
+# random = random.choice(list(json_object))
+random_choice = input("Would you like me to choose a random meal for you? (yes/no): ").lower()
+
+if random_choice == 'yes':
+    print('Your randomly selected meal is: '+ random_meal()["mealName"])
+
+# Vegetarian meal and side dish conditional question    
 # while diet not in ('yes', 'no'):
 diet = input('\033[31m'"Do you eat meat? (yes/no): "'\033[39m').lower()
+
 #Vegetarian breakfast
 if diet == 'no' and hour < 12:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} breakfast:\n"'\033[39m')
