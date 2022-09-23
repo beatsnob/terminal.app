@@ -60,15 +60,17 @@ else:
 
 #Vegetarian question
 
-while (diet != 'yes' or diet != 'no'):
+while True:
     diet = input('\033[31m'"Do you eat meat? (yes/no): "'\033[39m').lower()
     print(diet)
-
+    if diet == 'yes' or diet == 'no':
+        break
 #Vegetarian breakfast
 if diet == 'no' and hour < 12:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} breakfast:\n"'\033[39m')
     print(json_object[0]["mealName"])
-    side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+
+side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
 if side_dish == 'yes' and diet == "no" and hour < 12:
     side_agree(agree)
     print(json_object[1]["mealName"])
@@ -77,7 +79,7 @@ elif side_dish == 'no':
     side_disagree(disagree)
 
 #Vegetarian lunch
-elif diet == 'no' and hour < 18:
+if diet == 'no' and hour < 18:
     print('\033[33m'f"\nOK here is a mouthwatering {herbivore} lunch:\n"'\033[39m')
     print(json_object[2]["mealName"])
     side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()

@@ -1,4 +1,3 @@
-import functions
 from colorama import init
 init()
 from datetime import datetime
@@ -32,7 +31,11 @@ morning = ('\033[33m'f"\nGood morning! Today is {date}. The time is {time}. \nIt
 afternoon = ('\033[33m'f"\nGood afternoon! Today is {date}. The time is {time}. \nIt's lunch time! Let's find a delicious meal to eat!\n"'\033[39m')
 evening = ('\033[33m'f"\nGood evening! Today is {date}. The time is {time}. \nIt's dinner time! Let's find a delicious meal to eat!\n"'\033[39m')
 
-#Functions
+#Opening and reading json file
+with open('meals.json', 'r') as openfile:
+    json_object = json.load(openfile)["meals"]
+
+# #Functions
 def side_disagree(disagree):
     print(disagree)
 
@@ -59,10 +62,6 @@ def order_up_veg(veg):
 
 def order_up_meat(meat):
     print("{}".format(meat))
-
-#Opening and reading json file
-with open('meals.json', 'r') as openfile:
-    json_object = json.load(openfile)["meals"]
 
 # Conditional greeting based on the current time
 if hour < 12:
