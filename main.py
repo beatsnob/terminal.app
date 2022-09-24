@@ -64,6 +64,10 @@ def order_up_veg(veg):
 def order_up_meat(meat):
     print("{}".format(meat))
 
+def side_meal(side):
+    input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+
+
 # Conditional greeting based on the current time
 if hour < 12:
     morning_greeting(morning)
@@ -75,19 +79,19 @@ else:
 # Random meal selection question and conditionals
 while True:
     random_choice = input('\033[31m'"\nWould you like me to choose a random meal for you? (yes/no): "'\033[39m').lower()
-    if random_choice == 'yes' or random_choice == 'no':
+    if random_choice in ('yes', 'no'):
         break
 if random_choice == 'yes':
     print('\033[36m'"\nYour randomly selected meal is: "'\033[39m'+ random_meal()["mealName"])
 while True:
     go_on = input('\033[31m'"\nWould you like to continue choosing a meal? (yes/no): "'\033[39m').lower()
-    if go_on == 'yes' or go_on == 'no':
+    if go_on in ('yes', 'no'):
         break
 if go_on == 'yes':
 # Vegetarian meals
     while True:
         diet = input('\033[31m'"\nDo you eat meat? (yes/no): "'\033[39m').lower()
-        if diet == 'yes' or diet == 'no':
+        if diet in ('yes', 'no'):
             break
 elif go_on == 'no' and random_choice == 'no':
     print('\033[33m'"\nThank you, see you next time!"'\033[39m')
@@ -99,7 +103,7 @@ if go_on == 'yes' and diet == 'no' and hour < 12:
     print(json_object[0]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and diet == "no" and hour < 12:
         side_agree(agree)
@@ -108,12 +112,12 @@ if go_on == 'yes' and diet == 'no' and hour < 12:
     elif side_dish == 'no':
         side_disagree(disagree)
 # Vegetarian lunch
-if diet == 'no' and hour > 12 < 18:
+if diet == 'no' and hour < 18:
     order_up_veg(veg)
     print(json_object[2]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and diet == "no" and hour < 18:
         side_agree(agree)
@@ -123,11 +127,11 @@ if diet == 'no' and hour > 12 < 18:
         side_disagree(disagree)
 # Vegetarian dinner
 elif diet == 'no' and hour > 18:
-    order_up_veg
+    order_up_veg(veg)
     print(json_object[12]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and diet == "no" and hour > 18:
         side_agree(agree)
@@ -140,7 +144,7 @@ elif diet == 'no' and hour > 18:
 if diet == 'yes':
     while True:
         protein_option = input('\033[32m'f"\nOK let's find you a delicious meal.\nChoose from the following protein options: {proteins}"'\033[39m').lower()
-        if protein_option == 'beef' or protein_option == 'lamb' or protein_option == 'chicken' or protein_option == 'seafood':
+        if protein_option in ('beef', 'lamb', 'chicken','seafood'):
             break
 # Beef lunch
 if protein_option == "beef" and hour < 18:
@@ -148,7 +152,7 @@ if protein_option == "beef" and hour < 18:
     print(json_object[4]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == "yes" and protein_option == 'beef' and hour < 18:
         side_agree(agree)
@@ -162,7 +166,7 @@ elif protein_option == "beef" and hour > 18:
     print(json_object[14]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "beef" and hour > 18:
         side_agree(agree)
@@ -175,8 +179,8 @@ elif protein_option == "lamb" and hour < 18:
     order_up_meat(meat)
     print(json_object[6]["mealName"])
     while True:
-        side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        side_dish = input('\033[31m'"\nWould you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "lamb" and hour < 18:
         side_agree(agree)
@@ -190,7 +194,7 @@ elif protein_option == "lamb" and hour > 18:
     print(json_object[16]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "lamb" and hour > 18:
         side_agree(agree)
@@ -204,7 +208,7 @@ elif protein_option == "chicken" and hour < 18:
     print(json_object[8]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "chicken" and hour < 18:
         side_agree(agree)
@@ -218,7 +222,7 @@ elif protein_option == "chicken" and hour > 18:
     print(json_object[18]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "chicken" and hour > 18:
         side_agree(agree)
@@ -232,7 +236,7 @@ elif protein_option == "seafood" and hour < 18:
     print(json_object[10]["mealName"])
     while True:
         side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "seafood" and hour < 18:
         side_agree(agree)
@@ -245,8 +249,8 @@ elif protein_option == "seafood" and hour > 18:
     order_up_meat(meat)
     print(json_object[20]["mealName"])
     while True:
-        side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-        if side_dish == 'yes' or side_dish == 'no':
+        side_dish = input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): \n"'\033[39m').lower()
+        if side_dish in ('yes', 'no'):
             break
     if side_dish == 'yes' and protein_option == "seafood" and hour > 18:
         side_agree(agree)
