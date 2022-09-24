@@ -154,6 +154,8 @@ if protein_option == "beef" and hour < 18:
         side_agree(agree)
         print(json_object[5]["mealName"])
         bon_apetit(wish)
+    elif side_dish == "no" and protein_option == 'beef':
+        side_disagree(disagree)
 # Beef dinner
 elif protein_option == "beef" and hour > 18:
     order_up_meat(meat)
@@ -166,6 +168,8 @@ elif protein_option == "beef" and hour > 18:
         side_agree(agree)
         print(json_object[15]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "beef":
+        side_disagree(disagree)
 # Lamb lunch
 elif protein_option == "lamb" and hour < 18:
     order_up_meat(meat)
@@ -178,6 +182,8 @@ elif protein_option == "lamb" and hour < 18:
         side_agree(agree)
         print(json_object[7]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "lamb":
+        side_disagree(disagree)
 # Lamb dinner
 elif protein_option == "lamb" and hour > 18:
     order_up_meat(meat)
@@ -190,6 +196,8 @@ elif protein_option == "lamb" and hour > 18:
         side_agree(agree)
         print(json_object[17]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "lamb":
+        side_disagree(disagree)
 # Chicken lunch
 elif protein_option == "chicken" and hour < 18:
     order_up_meat(meat)
@@ -202,6 +210,8 @@ elif protein_option == "chicken" and hour < 18:
         side_agree(agree)
         print(json_object[9]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "chicken":
+        side_disagree(disagree)
 # Chicken dinner
 elif protein_option == "chicken" and hour > 18:
     order_up_meat(meat)
@@ -214,6 +224,8 @@ elif protein_option == "chicken" and hour > 18:
         side_agree(agree)
         print(json_object[19]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "chicken":
+        side_disagree(disagree)
 # Seafood lunch
 elif protein_option == "seafood" and hour < 18:
     order_up_meat(meat)
@@ -226,6 +238,8 @@ elif protein_option == "seafood" and hour < 18:
         side_agree(agree)
         print(json_object[11]["mealName"])
         bon_apetit(wish)
+    elif side_dish == 'no' and protein_option == "seafood":
+        side_disagree(disagree)
 # Seafood dinner
 elif protein_option == "seafood" and hour > 18:
     order_up_meat(meat)
@@ -238,5 +252,5 @@ elif protein_option == "seafood" and hour > 18:
         side_agree(agree)
         print(json_object[21]["mealName"])
         bon_apetit(wish)
-    elif side_dish == 'no':
+    elif side_dish == 'no' and protein_option == "seafood":
         side_disagree(disagree)
