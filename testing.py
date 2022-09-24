@@ -103,16 +103,14 @@
 #     side_disagree(disagree)
 
 def input_question(question):
-    input("how do you do?")
+    input("how do you do? ")
 
-question = ''
 
 while True:
     input_question(question)
     if input_question(question) in ('yes', 'no'):
         break
-    
-if input_question(question) == 'yes':
+    if question == 'yes':
         print("this is the correct answer")
-elif input_question(question) == 'no':
+    elif question == 'no':
         print("this is clearly working")

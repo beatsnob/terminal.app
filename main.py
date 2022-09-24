@@ -64,10 +64,6 @@ def order_up_veg(veg):
 def order_up_meat(meat):
     print("{}".format(meat))
 
-def side_meal(side):
-    input('\033[31m'"Would you like a side dish to accompany your meal? (yes/no): "'\033[39m').lower()
-
-
 # Conditional greeting based on the current time
 if hour < 12:
     morning_greeting(morning)
@@ -88,6 +84,7 @@ while True:
     if go_on in ('yes', 'no'):
         break
 if go_on == 'yes':
+
 # Vegetarian meals
     while True:
         diet = input('\033[31m'"\nDo you eat meat? (yes/no): "'\033[39m').lower()
@@ -97,6 +94,7 @@ elif go_on == 'no' and random_choice == 'no':
     print('\033[33m'"\nThank you, see you next time!"'\033[39m')
 else:
     bon_apetit(wish)
+
 # Vegetarian breakfast
 if go_on == 'yes' and diet == 'no' and hour < 12:
     order_up_veg(veg)
@@ -111,6 +109,7 @@ if go_on == 'yes' and diet == 'no' and hour < 12:
         bon_apetit(wish)
     elif side_dish == 'no':
         side_disagree(disagree)
+
 # Vegetarian lunch
 if diet == 'no' and hour < 18:
     order_up_veg(veg)
@@ -125,6 +124,7 @@ if diet == 'no' and hour < 18:
         bon_apetit(wish)
     elif side_dish == 'no' and hour < 18:
         side_disagree(disagree)
+
 # Vegetarian dinner
 elif diet == 'no' and hour > 18:
     order_up_veg(veg)
@@ -146,6 +146,7 @@ if diet == 'yes':
         protein_option = input('\033[32m'f"\nOK let's find you a delicious meal.\nChoose from the following protein options: {proteins}"'\033[39m').lower()
         if protein_option in ('beef', 'lamb', 'chicken','seafood'):
             break
+
 # Beef lunch
 if protein_option == "beef" and hour < 18:
     order_up_meat(meat)
@@ -160,6 +161,7 @@ if protein_option == "beef" and hour < 18:
         bon_apetit(wish)
     elif side_dish == "no" and protein_option == 'beef':
         side_disagree(disagree)
+
 # Beef dinner
 elif protein_option == "beef" and hour > 18:
     order_up_meat(meat)
@@ -174,6 +176,7 @@ elif protein_option == "beef" and hour > 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "beef":
         side_disagree(disagree)
+
 # Lamb lunch
 elif protein_option == "lamb" and hour < 18:
     order_up_meat(meat)
@@ -188,6 +191,7 @@ elif protein_option == "lamb" and hour < 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "lamb":
         side_disagree(disagree)
+
 # Lamb dinner
 elif protein_option == "lamb" and hour > 18:
     order_up_meat(meat)
@@ -202,6 +206,7 @@ elif protein_option == "lamb" and hour > 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "lamb":
         side_disagree(disagree)
+
 # Chicken lunch
 elif protein_option == "chicken" and hour < 18:
     order_up_meat(meat)
@@ -216,6 +221,7 @@ elif protein_option == "chicken" and hour < 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "chicken":
         side_disagree(disagree)
+
 # Chicken dinner
 elif protein_option == "chicken" and hour > 18:
     order_up_meat(meat)
@@ -230,6 +236,7 @@ elif protein_option == "chicken" and hour > 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "chicken":
         side_disagree(disagree)
+
 # Seafood lunch
 elif protein_option == "seafood" and hour < 18:
     order_up_meat(meat)
@@ -244,6 +251,7 @@ elif protein_option == "seafood" and hour < 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "seafood":
         side_disagree(disagree)
+        
 # Seafood dinner
 elif protein_option == "seafood" and hour > 18:
     order_up_meat(meat)
