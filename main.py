@@ -1,9 +1,8 @@
-from colorama import init
-init()
 from datetime import datetime
 import json
 import random
-
+from colorama import init
+init()
 
 # Definitions
 
@@ -251,7 +250,7 @@ elif protein_option == "seafood" and hour < 18:
         bon_apetit(wish)
     elif side_dish == 'no' and protein_option == "seafood":
         side_disagree(disagree)
-        
+
 # Seafood dinner
 elif protein_option == "seafood" and hour > 18:
     order_up_meat(meat)
