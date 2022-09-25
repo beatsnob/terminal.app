@@ -110,7 +110,7 @@ if go_on == 'yes' and diet == 'no' and hour < 12:
         side_disagree(disagree)
 
 # Vegetarian lunch
-if diet == 'no' and hour < 18:
+elif diet == 'no' and hour < 18:
     order_up_veg(veg)
     print(json_object[2]["mealName"])
     while True:
