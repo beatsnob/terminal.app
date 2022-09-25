@@ -31,13 +31,13 @@ This application is simple in its design and use - it takes user input regarding
   
   ![side dish question](docs/../../docs/side-dish-question-4.png)  
   ![vegetarian meal suggestion](../docs/vegetarian-suggestion-and-end-6.png)  
-  user selects 'yes' to the side dish question
+  user selects 'yes' to the side dish question  
   ![side dish question disagree](docs/../../docs/side-dish-disagree-5.png)  
   user selects 'no' to the side dish question and is presented with the end message
 
 * If the user selects 'yes' to the 'do you eat meat' question, the application will present four protein choice options for them to choose from:
   
-  ![protein choice question](/docs/herbivore-question-agree-7.png)  
+  ![protein choice question](docs/../../docs/herbivore-question-agree-7.png)  
   The user can choose any of these protein options by typing in the choice they select  
 * The application will then take into account the user's choice of protein and suggest a meal based on this choice and the time of day - for example if the user selected 'lamb' as their chosen protein choice and it was lunch time, the application will suggest a lamb based lunch meal, provide a final bon apetit message and then end.
   
@@ -62,7 +62,7 @@ Manual testing was designed and implemented around the three main features of th
 | Random meal suggestion is generated from the JSON file upon user choosing 'yes' in response to the random choice request | The response to the random choice request was 'yes' | A random meal suggestion regardless of current time and dietary preference | As expected
 | A specific meal suggestion is generated based on user response to the dietary preference question and current time (morning, afternoon or evening) to output a time based main meal (Breakfast, lunch or dinner) | Response to the dietary preference question was 'no' in order to select a vegetarian meal suggestion | A vegetarian meal suggestion based on current time (lunch) | As expected
 |A side dish suggestion based on current time, user dietary preference (vegetarian or user selected meat based), and choosing 'yes' in response to the side dish question | Response to side dish question was 'yes' and protein selected was 'beef' | A beef based side dish suggestion based on the current time (lunch) | As expected
-|  
+
 ## Help Documentation
 ---  
 
