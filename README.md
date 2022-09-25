@@ -2,7 +2,9 @@
 
 [Link to Github repository](https://github.com/beatsnob/terminal.app)  
 
-[Link to Trello board](https://trello.com/b/oJlvboIs/terminal-application)
+[Link to Trello board](https://trello.com/b/oJlvboIs/terminal-application)  
+
+[Link to Presentation](https://vimeo.com/753527045)
 
 ## Purpose and design
 
