@@ -17,38 +17,39 @@ This application is simple in its design and use - it takes user input regarding
 
 * The application opens with a greeting based on the current local date and time with a short message on getting started - this is achieved using the datetime python module.
   
-  ![opening time of day greeting](MostafaMassalkhi_T1A3/../../docs/time-greeting-1.png)
+  ![opening time of day greeting](docs/time-greeting-1.png)
   
 * The application asks whether the user would like the application to suggest a random meal - this feature does not take into account the dietary preferences of the user nor the local current time. The application does not specify whether the meal is a main, a side, breakfast, lunch or dinner. This feature will pull any of the meal objects from the imported JSON file and then ask the user whether they want to continue using the application. If the user selects 'yes' then the application will continue. If the user selects 'no' then the application will print a goodbye message.
   
-  ![random meal suggestion](MostafaMassalkhi_T1A3/../../docs/random-meal-question-2.png)
+  ![random meal suggestion](docs/random-meal-question-2.png)
   
 * The application will check the current local time (morning, afternoon or evening) in order to determine the meal suggestion (breakfast, lunch or dinner), as well as checking the dietary preference that the user has selected. The preferences that the user can choose from are either vegetarian or meat based, with the protein choice question prompting the user to select from the following protein options: beef, lamb, chicken and seafood.  
   
-  ![herbivore question vegetarian selection](MostafaMassalkhi_T1A3/../../docs/herbivore-question-disagree-3.png)
+  ![herbivore question vegetarian selection](docs/herbivore-question-disagree-3.png)
 
 * If the user selects 'no' they do not eat meat, the application will suggest a vegetarian based meal. The application has an additional feature that questions the user on whether they would like a side dish suggestion to go with their meal suggestion. This question comes after the main meal suggestion has been printed and the user can select either 'yes' or 'no' in response, with 'yes' printing out a side dish suggestion that conforms to the users dietary preferences along with the bon appetit message, while 'no' directly prints another version of the bon appetit message.
   
-  ![side dish question](MostafaMassalkhi_T1A3/../../docs/side-dish-question-4.png)  
-  ![vegetarian meal suggestion](MostafaMassalkhi_T1A3/../../docs/vegetarian-suggestion-and-end-6.png)  
-  user selects 'yes' to the side dish question
-  ![side dish question disagree](MostafaMassalkhi_T1A3/../../docs/side-dish-disagree-5.png)  
+  ![side dish question](docs/side-dish-question-4.png)  
+  ![vegetarian meal suggestion](docs/vegetarian-suggestion-and-end-6.png)  
+  user selects 'yes' to the side dish question  
+
+  ![side dish question disagree](docs/side-dish-disagree-5.png)  
   user selects 'no' to the side dish question and is presented with the end message
 
 * If the user selects 'yes' to the 'do you eat meat' question, the application will present four protein choice options for them to choose from:
   
-  ![protein choice question](MostafaMassalkhi_T1A3/../../docs/herbivore-question-agree-7.png)  
+  ![protein choice question](docs/herbivore-question-agree-7.png)  
   The user can choose any of these protein options by typing in the choice they select  
 * The application will then take into account the user's choice of protein and suggest a meal based on this choice and the time of day - for example if the user selected 'lamb' as their chosen protein choice and it was lunch time, the application will suggest a lamb based lunch meal, provide a final bon apetit message and then end.
   
-  ![meat meal suggestion](MostafaMassalkhi_T1A3/../../docs/meat-meal-suggestion-8.png)
+  ![meat meal suggestion](docs/meat-meal-suggestion-8.png)
 
 ## Implementation Plan
 ---
 
 In designing and implementing the features of this application, I utilised a kanban board on trello.com to create a break down of the plan into the individual steps that were required for completion. The use of the kanban board feature was extremely helpful in labelling and prioritising current and future steps to keep the workflow on track. The intuitive visual aspect of the board also allowed me to keep track of the steps I have completed, what was next and what was important. Click the image below to navigate to the Trello board.
 
-[![trello board screeshot](MostafaMassalkhi_T1A3/../../docs/trello-board.png)](https://trello.com/b/oJlvboIs/terminal-application)
+[![trello board screeshot](docs/trello-board.png)](https://trello.com/b/oJlvboIs/terminal-application)
 
 
 ## Testing  
@@ -62,7 +63,7 @@ Manual testing was designed and implemented around the three main features of th
 | Random meal suggestion is generated from the JSON file upon user choosing 'yes' in response to the random choice request | The response to the random choice request was 'yes' | A random meal suggestion regardless of current time and dietary preference | As expected
 | A specific meal suggestion is generated based on user response to the dietary preference question and current time (morning, afternoon or evening) to output a time based main meal (Breakfast, lunch or dinner) | Response to the dietary preference question was 'no' in order to select a vegetarian meal suggestion | A vegetarian meal suggestion based on current time (lunch) | As expected
 |A side dish suggestion based on current time, user dietary preference (vegetarian or user selected meat based), and choosing 'yes' in response to the side dish question | Response to side dish question was 'yes' and protein selected was 'beef' | A beef based side dish suggestion based on the current time (lunch) | As expected
-|  
+
 ## Help Documentation
 ---  
 
